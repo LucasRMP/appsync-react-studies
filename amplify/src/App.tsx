@@ -1,9 +1,11 @@
 import React from "react";
-import { Connect } from "aws-amplify-react";
+import { Connect, withAuthenticator } from "aws-amplify-react";
 import { graphqlOperation } from "aws-amplify";
-import { createBlog } from "./graphql/mutations";
 
+import "@aws-amplify/ui/dist/style.css";
 import "./App.css";
+
+import { createBlog } from "./graphql/mutations";
 import { Form } from "./Form";
 import { Blogs } from "./Blogs";
 
@@ -27,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);

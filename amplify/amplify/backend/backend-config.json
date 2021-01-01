@@ -1,6 +1,14 @@
 {
+  "auth": {
+    "web24d7c841": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
   "api": {
-    "api": {
+    "blogsapi": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -9,7 +17,7 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 365,
-              "description": "api key"
+              "description": ""
             }
           },
           "additionalAuthenticationProviders": []
